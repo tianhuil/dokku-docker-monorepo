@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
+source "$PLUGIN_CORE_AVAILABLE_PATH/common/functions"
+
+APP="$1"; TMP_WORK_DIR="$2"; REV="$3"
+
+[[ ! -f "$TMP_WORK_DIR/.dokku-docker-monorepo" ]] && exit
+
+dokku_log_info2 "Docker Monorepo detected"
+
+if [[ ! -f "$TMP_WORK_DIR/Dockerfile.$APP" ]] then
+    dokku_log_info2 "The application $APP could not find Dockerfile Dockerfile.$APP!"
+    exit 1
+fi
+
+cp -f "$TMP_WORK_DIR/Dockerfile.$APP" $TMP_WORK_DIR/Dockerfile" 
+dokku_log_info2 "Using Dockerfile.$APP as Dockerfile"
