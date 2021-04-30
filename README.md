@@ -3,7 +3,7 @@ Robust dokku monorepo using Dockerfile.
 
 ## Install
 ```bash
-dokku plugin:install https://gitlab.com/tianhuil/dokku-docker-monorepo
+dokku plugin:install https://github.com/tianhuil/dokku-docker-monorepo
 ```
 
 ## Usage
