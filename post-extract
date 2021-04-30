@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
+dokku_log_info2 "Docker Monorepo Plugin installed"
 source "$PLUGIN_CORE_AVAILABLE_PATH/common/functions"
 
 APP="$1"; TMP_WORK_DIR="$2"; REV="$3"
