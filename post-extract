@@ -13,5 +13,5 @@ if [[ ! -f "$TMP_WORK_DIR/Dockerfile.$APP" ]] then
     exit 1
 fi
 
-cp -f "$TMP_WORK_DIR/Dockerfile.$APP" $TMP_WORK_DIR/Dockerfile" 
+cp -f "$TMP_WORK_DIR/Dockerfile.$APP" "$TMP_WORK_DIR/Dockerfile" 
 dokku_log_info2 "Using Dockerfile.$APP as Dockerfile"
