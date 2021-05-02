@@ -9,7 +9,7 @@ APP="$1"; TMP_WORK_DIR="$2"; REV="$3"
 
 dokku_log_info2 "Docker Monorepo detected"
 
-if [[ ! -f "$TMP_WORK_DIR/Dockerfile.$APP" ]] then
+if [[ ! -f "$TMP_WORK_DIR/Dockerfile.$APP" ]]; then
     dokku_log_info2 "The application $APP could not find Dockerfile Dockerfile.$APP!"
     exit 1
 fi
